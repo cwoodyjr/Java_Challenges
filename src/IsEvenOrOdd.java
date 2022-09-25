@@ -7,7 +7,7 @@ public class IsEvenOrOdd {
                         // here int n = userNum.
                         // % is modulo (finds remainder), here %2 finds remainder when input is
                         // divided by 2. if == 0, number is even.
-                        // if result ==0, returns true. if result =>1, returns false
+                        // if result ==0, returns true. if result =>1, returns false.
     }
 
     public static void main(String[] args) {
