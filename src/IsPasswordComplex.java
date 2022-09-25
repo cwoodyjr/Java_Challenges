@@ -6,8 +6,10 @@ public class IsPasswordComplex {
         return password.length() >= 6 &&                         //checks password is greater than 6. if not returns false
                 password.matches(".*\\d.*")&&             //checks password has a number , if not returns false
                 password.matches(".*[a-z].*")&&            //checks for a lower case letter, if not returns false
-                password.matches(".*[A-Z].*");             //checks for an upper case letter, if not returns false
-    }                                                          // if all checks return true, isPasswordComplex returns true.
+                password.matches(".*[A-Z].*")&&             //checks for an upper case letter, if not returns false
+                password.matches(".*[!£$%^&*,.?_+].*");     //checks for one of the special characters stated
+                }                                                // if all checks return true, isPasswordComplex returns true.
+
     // if not, isPasswordComplex returns false
     public static void main(String[] args) {
 
