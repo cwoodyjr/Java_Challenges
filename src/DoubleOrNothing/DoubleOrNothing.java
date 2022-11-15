@@ -58,7 +58,7 @@ public class DoubleOrNothing {
                 "We'll start you off with " + startPoints +
                 " points\n");
     }
-    protected void askUserToContinue() {
+    private void askUserToContinue() {
         System.out.println("Would you like to continue " +
                 "and try to double your winnings? " +
                 "Enter YES to continue");
