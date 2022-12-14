@@ -56,5 +56,14 @@ public class hundredDaysFromNow {
         String formattedDate = today
                 .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
         System.out.println("10 years from now is "+formattedDate);
+        formattedDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+        System.out.println("10 years from now is "+formattedDate);
+        formattedDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
+        System.out.println("10 years from now is "+formattedDate);
+        formattedDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
+        System.out.println("10 years from now is "+formattedDate);
     }
 }
