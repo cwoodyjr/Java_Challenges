@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.Nullable;
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
@@ -17,30 +15,46 @@ public class hundredDaysFromNow {
         calculateYearsFromNow(today);
     }
 
-    static LocalDate calculateDaysFromNow(LocalDate today){
+    public static void calculateDaysFromNow(LocalDate today){
         Period hundredDays = Period.ofDays(100);
         today = today.plus(hundredDays);
-        String formattedDate = today
+        String mediumDate = today
                 .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
-        System.out.println("100 days from now is "+formattedDate);
-        return null;
+        String fullDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+        String shortDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
+        String longDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
 
-    }static LocalDate calculateMonthsFromNow(LocalDate today){
+        System.out.println("100 days from now is "+mediumDate);
+        System.out.println("100 days from now is "+fullDate);
+        System.out.println("100 days from now is "+shortDate);
+        System.out.println("100 days from now is "+longDate);
+
+    }
+    public static void calculateMonthsFromNow(LocalDate today){
         Period numMonths = Period.ofMonths(6);
         today = today.plus(numMonths);
         String formattedDate = today
                 .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
         System.out.println("6 months from now is "+formattedDate);
-        return null;
+        formattedDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+        System.out.println("6 months from now is "+formattedDate);
+        formattedDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
+        System.out.println("6 months from now is "+formattedDate);
+        formattedDate = today
+                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
+        System.out.println("6 months from now is "+formattedDate);
     }
 
-    static LocalDate calculateYearsFromNow(LocalDate today){
+    public static void calculateYearsFromNow(LocalDate today){
         Period oneYear = Period.ofYears(10);
         today = today.plus(oneYear);
         String formattedDate = today
                 .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
         System.out.println("10 years from now is "+formattedDate);
-        return null;
-
     }
 }
