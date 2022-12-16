@@ -8,11 +8,23 @@ public class hundredDaysFromNow {
     public static void main(String[] args) {
         LocalDate today = LocalDate.now(ZoneId.of("Europe/London"));
 
+        todaysDate(today);
+        System.out.println();
         calculateDaysFromNow(today);
         System.out.println();
         calculateMonthsFromNow(today);
         System.out.println();
         calculateYearsFromNow(today);
+    }
+
+    private static void todaysDate(LocalDate today) {
+        System.out.println("today's date is: "+today);
+        DateTimeFormatter chippy = DateTimeFormatter.ofPattern("dd/MMMM/yyyy");
+        System.out.println("Todays date is: "+today.format(chippy));
+        chippy = DateTimeFormatter.ofPattern("dd-MM-yy");
+        System.out.println("today's date is: "+today.format(chippy));
+        chippy = DateTimeFormatter.ofPattern("dd MMM yyyy");
+        System.out.println("Today's date is: "+today.format(chippy));
     }
 
     public static void calculateDaysFromNow(LocalDate today){
