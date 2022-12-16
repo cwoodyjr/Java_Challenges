@@ -20,7 +20,7 @@ public class hundredDaysFromNow {
     private static void todaysDate(LocalDate today) {
         System.out.println("today's date is: "+today);
         DateTimeFormatter chippy = DateTimeFormatter.ofPattern("dd/MMMM/yyyy");
-        System.out.println("Todays date is: "+today.format(chippy));
+        System.out.println("Today's date is: "+today.format(chippy));
         chippy = DateTimeFormatter.ofPattern("dd-MM-yy");
         System.out.println("today's date is: "+today.format(chippy));
         chippy = DateTimeFormatter.ofPattern("dd MMM yyyy");
